@@ -17,6 +17,14 @@ O React tem mais demanda que os concorrentes: vue e anbgular
 
 Podemos adicionar o react para um projeto pronto
 
+## Exemplos
+
+Na pasta exemplos:
+- Coomponentes
+- Props
+- Rotas
+- Stats
+
 ## Utilização com backend
 
 A biblioteca pode ser utilizada com qualquer tipo de linguagem de back-end, ou seja, a aplicação pode ser em PHP, Java, Node etc. 
