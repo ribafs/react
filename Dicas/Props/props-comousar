@@ -1,0 +1,27 @@
+O que são as props no React?
+
+Outro conceito importante dos componentes é a forma como se comunicam. O React tem um objeto especial, chamado de prop (que significa propriedade), que usamos para transportar dados de um componente para o outro.
+
+Mas cuidado – as props transportam dados apenas em uma direção (somente do elemento pai para os elementos filhos). Não é possível com as props passar dados do elemento filho para o pai, nem para componentes de mesmo nível.
+
+Vamos revisitar a função App( ) acima para ver como passar dados com as props.
+
+Primeiro, precisamos definir uma prop no componente Welcome e atribuir um valor a ela:
+
+import Welcome from './Welcome';
+
+function App() { 
+  return (
+    <div className="App">
+      <Welcome name="John"/>
+      <Welcome name="Mary"/>
+      <Welcome name="Alex"/>
+    </div>
+  );
+}
+
+As props são valores personalizados e tornam os componentes mais dinâmicos. Como o componente Welcome é o elemento filho aqui, precisamos definir as props em seu pai (App), para podermos passar os valores e obter o resultado simplesmente acessando a prop "name":
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}

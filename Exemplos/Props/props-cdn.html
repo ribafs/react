@@ -1,0 +1,24 @@
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>
+}
+
+function Garage() {
+  return (
+    <>
+	    <h1>Who lives in my garage?</h1>
+	    <Car brand="Ford" />
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage />);
+</script>

@@ -1,0 +1,86 @@
+Exporta~]ao nomeada ermite exportar diversas funções entre chaves.
+Ao importar devemos manter o mesmo nome
+
+export Nome {Menu, Rodape}
+
+No App 
+
+import Nome {Menu, Rodape} from './components/Outros
+
+Usar
+
+<Menu />'
+<Rodape />'
+
+Na exportação padrão, somente pode ter um export default por módulo, cada módulo é um arquivo
+
+export default Nome
+
+Na exportação nomeada
+
+Pode ser importado com qualquer nome, o nome usado para exportar
+
+function App(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+export default App
+
+Criar em
+
+comonents/Main.js
+
+function Main(){
+    return (
+        <div>
+            <h1>Hello froom main</h1>
+        </div>
+    )
+}
+
+
+
+No App.js
+
+import Main './conponents/Main'
+
+    <Mainn />
+Ao invés podemos usar o export na frente
+
+export default function App(){
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+Exportar duas funções nomeadas
+
+emport Nome, {Cabecalho, Rodape}
+
+function Header(){
+    return (
+        <div>
+            <h1>Header<h1>
+        </div>
+    )
+}
+
+function Footer(){
+    return (
+        <div>
+            <h2>Foooter<h2>
+        </div>
+    )
+}
+
+No App.js
+
+import Count, {Header, Footeer}
+
+

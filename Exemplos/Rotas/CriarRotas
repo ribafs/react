@@ -1,0 +1,67 @@
+Tutorial sobre implementação de rotas no react
+
+Ao desenvolver uma aplicação, pensamos em quantas páginas existirão, a navegação entre elas e como elas serão desenvolvidas.
+
+Pensando que ao utilizar o React para o desenvolvimento de uma aplicação padrão SPA (Single Page Application) e que nessa aplicação seja possível acessar outras interfaces e componentes, há a necessidade de fazer o roteamento dos caminhos que serão acessados. A maneira mais completa de fazer isso e também uma das mais utilizadas é com a biblioteca chamada react-router, que possui uma versão web chamada react-router-dom.
+
+instalação com javascript e Vite
+
+npm create vite@latest routter -- --template react
+
+cd router
+
+npm install react-router-dom localforage match-sorter sort-by
+
+npm run dev
+
+
+Provavelmente não é surpresa para você que o React Router seja a biblioteca de terceiros mais popular no ecossistema React. De fato, durante os últimos 6 meses, o React Router foi incluído em 44% (https://npmtrends.com/react-dom-vs-react-router-dom) de todos os projetos React. Essa estatística por si só é suficiente para declarar o React Router como conhecimento essencial para qualquer desenvolvedor React sério.
+
+O que é React Router?
+
+Roteamento é a capacidade de mostrar diferentes páginas ao usuário. Isso significa que o usuário pode mover-se entre diferentes partes de um aplicativo inserindo um URL ou clicando em um elemento.
+Como você já deve saber, por padrão, o React vem sem roteamento, pois foi pensado no modelo de aplicação single page (ou "de página única", em português), cuja funcionalidade está concentrada em uma única página. Porém, para tornar isso possível em nosso projeto, precisamos adicionar uma biblioteca chamada react-router (texto em inglês).
+
+Criado pela primeira vez em 2014, o React Router é uma biblioteca de roteamento declarativa, baseada em componentes, do lado do cliente e do servidor para React. Assim como o React oferece uma API declarativa e combinável para adicionar e atualizar o estado do aplicativo, o React Router oferece uma API declarativa e combinável para adicionar e atualizar o histórico de navegação do usuário.
+
+Se você é novo no React, pode ser uma surpresa saber que um roteador não está embutido na própria biblioteca, mas isso é fundamental para o espírito do React. O React se concentra em fornecer primitivas de interface do usuário para criar seu aplicativo e nada mais.
+
+Poeticamente, o React Router segue um ethos semelhante, exceto que, em vez de primitivas de interface do usuário, eles fornecem primitivas de roteamento. Para alinhar com o React, naturalmente, essas "primitivas de roteamento" são realmente apenas uma coleção de componentes e Hooks do React.
+
+Vamos nos aprofundar nos mais importantes antes de examinarmos os casos de uso específicos.
+
+No React Router temoos o link
+
+<Link to="/">Home</Link>
+
+useParams
+
+Outlet
+
+children
+
+https://ui.dev/react-router-tutorial
+
+
+
+Adicionar rota  ajustar na main:
+
+- adicionar import
+- adicionar component
+
+https://www.freecodecamp.org/portuguese/news/um-guia-completo-de-react-router-para-iniciantes-incluindo-router-hooks/
+
+npm install react-router-dom
+Os componentes utilizados até antes da versão 6 eram:
+    • BrowserRouter: é a função raiz da lib. Todas as rotas precisam estar declaradas dentro desse escopo, ou seja, nenhuma outra rota poderá ser acessada se não tiver sido declarada aqui. Lembrando que há apenas uma declaração de BrowserRouter no projeto. Como o nome é muito extenso, é normal no import deste componente ser utilizado o as Router. 
+    • Route: o segundo a ser declarado é o Route. Pode-se dizer que é o mais importante dentro dos componentes do React Router. É de responsabilidade dele a renderização da interface, sendo ela um componente ou uma página, quando o caminho (path) combinar com o esperado. Pode ser declarada várias rotas contendo o path, o componente e também a props se necessário.
+    • Switch: esse componente é utilizado a partir do momento que adicionamos várias rotas. Ao declarar o switch, a rota será buscada e, então, quando for encontrada a busca será finalizada, já que sem esse componente todas as rotas serão processadas. 
+    • Link: basicamente permite que haja navegação de linkagem de uma maneira mais fácil, o que antes era feito com as tag <a href='#'> agora pode ser substituído por <link to>.
+
+https://ateliware.com/blog/react-router
+
+https://www.freecodecamp.org/news/react-router-in-5-minutes/
+
+https://dev.to/franciscomendes10866/file-based-routing-using-vite-and-react-router-3fdo
+
+

@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    paddind: 0;
+}
+
+.comp{
+    color: red;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 50px;
+}

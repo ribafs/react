@@ -1,0 +1,12 @@
+Desestruturando
+
+const Hero = ({nome, personagem}) => {
+
+	return (
+		<div>
+			<h1>{nome}</h1>
+			<h2>{personagem}</h2>
+		</div>
+	)
+
+

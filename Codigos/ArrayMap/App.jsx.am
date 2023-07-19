@@ -1,0 +1,23 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+const userNames = ['Jesse', 'Tom', 'Anna']
+function App() {
+
+  const renderListOfUserNames = (names) => {
+    return names.map(name => <li>{name}</li>)
+  }
+
+  return (
+    <div>
+	<h1>Lista com map</h1>
+      <ul>
+        {renderListOfUserNames(userNames)}
+      </ul>
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,7 @@
+Ao invés de criar uma pasta e colocar nela os componentes, podemos
+
+Criar um arquivo (rotas) e importar os componentes nele
+
+Depois importar o rotas no App
+
+

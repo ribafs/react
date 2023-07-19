@@ -1,0 +1,21 @@
+Desestruturando
+
+const App = () => {
+
+    const herois =[
+            {nome="Super man" personagem="Clark Kent" },
+            {nome="Batman" personagem="Bruce Weine" /> },
+            {nome="Wonder Woman" personagem="Diana Prince}"
+    ];
+
+    const novaArray = herois.map(item= => <Hero noome=item.nome} pensoonagem={item.ppeersonamem}/>)
+
+    const novaArray
+
+	return (
+		<div>
+            {novaArray}
+		</div>
+	)
+
+https://www.youtube.com/watch?v=ed0wariCnx4&list=PL4PvbJTuGFzvoHA0dwjmVI-vmyho0zysd&index=22

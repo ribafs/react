@@ -1,0 +1,28 @@
+        class App extends React.Component{
+            constructor(){
+                super()
+                this.state = {
+                    nome: 'Ribamar'
+                }
+                // O método cmdClique se ligará à esta classe
+                this.cmdClique = this.cmdClique.bind(this)
+            }
+            cmdClique(){
+                this.setState({nome: 'Elias'})
+            }
+
+            render(){
+                return(
+                    <div>
+                        <h3>Nome {this.state.nome}</h3>
+                        <button onClick = {this.cmdClique}>Clique</button>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+                <App />,
+                document.getElementById('root')
+        )
+

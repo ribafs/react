@@ -1,0 +1,74 @@
+Array Maps
+
+Map é uma das funções mais populares e amplamente utilizadas ao trabalhar com o React. Ele tem dois casos de uso proeminentes. É bem parecido com o funcionamento do filter(). A primeira é modificar o estado da aplicação e a outra renderizar uma lista de elementos de forma eficiente. Vamos começar com o anterior primeiro.
+
+Modificar o estado de uma aplicação
+
+No exemplo a seguir, veremos como manipular arrays de dados com map() de forma eficiente. O resultado de chamar map() em um array é um NOVO array. Cada elemento dessa matriz é processado pela função de retorno de chamada fornecida ao próprio mapa.
+
+const fibonacciNumbers = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+const doubledFibonacciNumbers = fibonacciNumbers.map(number => number * 2)
+// [0, 2, 2, 4, 6, 10, 16, 26, 42, 68]
+
+Nos exemplos acima, temos um array contendo os 9 primeiros números da sequência de Fibonacci. Chamamos o método map() na variável fibonacciNumbers. A função de retorno de chamada fornecida ao método que pega cada elemento do array o multiplica por 2 e o escreve no novo array. Capturamos o novo array na variável doubledFibonacciNumbers.
+
+Vejamos outro exemplo. Desta vez, vamos trabalhar em algo um pouco complicado. Faremos uso da atribuição de desestruturação para nos ajudar a mapear uma lista de objetos e extrair alguns dados significativos deles.
+
+const users = [
+  {
+    name: "Jesse",
+    age: 21,
+    height: "1.90cm"
+  },
+  {
+    name: "Tom",
+    age: 25,
+    height: "1.67cm"
+  },
+  {
+    name: "Anna",
+    age: 34,
+    height: "1.59cm"
+  }
+]
+
+const userNames = users.map(({ name }) => name)
+// ['Jesse', 'Tom', 'Anna']
+
+Como você pode ver, temos um array users. Cada usuário é representado por um objeto. Cada objeto tem 3 propriedades, são elas: nome, idade e altura. O objetivo aqui é obter uma matriz de nomes de usuários e armazená-la como uma matriz.
+A forma mais simples de realizar esta operação é utilizando a função map. Estamos chamando map no array users, usando a atribuição de desestruturação para alcançar cada um dos objetos de usuário e selecionar o nome desse usuário em particular. As funções de retorno de chamada retornam o nome, que é gravado no novo array. E assim temos uma matriz de nomes de usuários prontos para usar.
+
+const userNames = ['Jesse', 'Tom', 'Anna']
+function App() {
+
+  const renderListOfUserNames = (names) => {
+    return names.map(name => <li>{name}</li>)
+  }
+
+  return (
+    <div>
+	<h1>Lista com map</h1>
+      <ul>
+        {renderListOfUserNames(userNames)}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+const userNames = ['Jesse', 'Tom', 'Anna']
+function App() {
+
+  return (
+    <div>
+      <ul>
+        {userNames.map(name => <li>{name}</li>)}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+https://upmostly.com/tutorials/how-to-use-map-in-react-applications
